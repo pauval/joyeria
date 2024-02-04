@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-areas:
+    "nav nav nav"
+    "aside section section"
+    "footer footer footer";
+}
+
+nav {
+  grid-area: nav;
+  display: flex;
+  align-items: center;
+  background-color: rgb(236, 212, 166);
+  gap: 20px;
+}
+
+
+.image_nav{
+  margin-left: 20px;
+  width: 70px;
+  border-radius: 50%; 
+}
+
+.texto_nav {
+  font-size: 20px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+}
+
+aside {
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: sticky; 
+  top: 0; 
+  padding: 1rem;
+  background-color: lightgrey;
+  height: auto;
+}
+
+aside ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside li {
+  margin-bottom: 5px;
+}
+
+aside li strong {
+  font-weight: bold;
+}
+
+aside li em {
+  font-style: italic;
+}
+
+
+section {
+  grid-area: section;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+section h2{
+  font-size: 18px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  border: 1px solid #ddd;
+
+  margin: 10px;
+  text-align: center;
+  border-radius: 10px; 
+  position: relative; 
+  border: 2px solid rgb(236, 212, 166)
+}
+
+
+.product-card p{
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.product-card span{
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-card img {
+  width: 150px; 
+  height: auto;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card button {
+  width: 100%; 
+  background-color: gold; 
+  border: none; 
+  margin: none;
+  padding: none;
+  border-radius: 5px; 
+  color: #fff; 
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.line-divider {
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 10px; 
+  margin-bottom: 5px;
+  border-radius: 5px; 
+}
+
+footer {
+  grid-area: footer;
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  bottom: 0;
+  z-index: 2; 
+}
+
+
